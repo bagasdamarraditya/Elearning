@@ -57,3 +57,5 @@ Route::put('admin/courses/update/{id}', [CoursesController::class, 'update']);
 // Route untuk menghapus courses
 Route::delete('admin/courses/delete/{id}',[CoursesController::class,'destroy']);
 
+
+

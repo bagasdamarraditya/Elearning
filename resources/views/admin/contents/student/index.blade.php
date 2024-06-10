@@ -21,6 +21,7 @@
                         <th>NIM</th>
                         <th>Class</th>
                         <th>Major</th>
+                        <th>Course</th>
                         <th>Action</th>
                     </tr>
                     @foreach ($students as $student)
@@ -30,6 +31,7 @@
                             <td>{{ $student->nim }}</td>
                             <td>{{ $student->class }}</td>
                             <td>{{ $student->major }}</td>
+                            <td>{{ $student->courses->name ?? 'tidak ada data' }}</td>
                             <td>
                                 <a href="/admin/student/edit/{{ $student->id }}"
                                     class="btn btn-warning me-2 d-inline-block">Edit</a>

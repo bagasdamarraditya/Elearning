@@ -12,5 +12,10 @@ class Student extends Model
     protected $table= 'students';
 
     // mendefinisikan field yang boleh diisi
-    protected $fillable = ['name', 'nim', 'major', 'class'];
+    protected $fillable = ['name', 'nim', 'major', 'class', 'courses_id'];
+
+    // mendefinisikan relasi ke model course
+    public function courses(){
+        return $this->belongsTo(Courses::class, 'courses_id');
+    }
 }
