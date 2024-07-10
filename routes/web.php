@@ -31,13 +31,13 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 // Route untuk menampilkan halaman student
-Route::get('admin/student',[StudentController::class,'index']);
+Route::get('admin/student',[StudentController::class,'index'])->middleware('admin');
 
 // Route untuk menampilkan halaman student
 Route::get('admin/courses',[CoursesController::class,'index']);
 
 // Route untuk menampilkan form tambah student
-Route::get('admin/student/create',[StudentController::class,'create']);
+Route::get('admin/student/create',[StudentController::class,'create'])->middleware('admin');;
 
 // Route untuk mengirim data student baru
 Route::post('admin/student/store',[StudentController::class,'store']);

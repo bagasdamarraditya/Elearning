@@ -13,7 +13,9 @@
     <section class="section">
         <div class="card">
             <div class="card-body">
+                @if (Auth::user()->role == 'admin')
                 <a href="/admin/courses/create" class="btn btn-primary mt-4">+ Courses</a>
+                @endif
                 <table class="table">
                     <tr>
                         <th>No</th>
